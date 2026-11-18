@@ -6,7 +6,7 @@ O jogador assume o papel de um investigador contratado para solucionar um grande
 
 ## 🌐 Acesse o jogo
 
-[**Jogar Detetive da Arquitetura**](COLOQUE_AQUI_O_LINK_DO_SITE)
+[**Jogar Detetive da Arquitetura**](https://vitor-oarevalo.github.io/arqcomp-cruzadinha/)
 
 ## 🎮 Como jogar
 
