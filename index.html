@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detetive da Arquitetura: investigue falhas e descubra os componentes da arquitetura computacional.">
+  <title>Detetive da Arquitetura</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <!-- TELA INICIAL -->
+    <section id="tela-inicial" class="screen intro-screen">
+      <div class="intro-card">
+        <p class="eyebrow">ARQUIVO CONFIDENCIAL · CASO 016</p>
+        <div class="brand-mark" aria-hidden="true">?</div>
+        <h1>Detetive da<br><span>Arquitetura</span></h1>
+        <p class="intro-subtitle">Uma empresa está à beira do colapso. Você consegue descobrir o que está acontecendo?</p>
+
+        <div class="dialogue">
+          <div class="dialogue-heading">
+            <div class="avatar">DG</div>
+            <div>
+              <strong>Diretor-geral</strong>
+              <small>Empresa Byte & Cia.</small>
+            </div>
+          </div>
+          <p>“Finalmente alguém interessado na vaga! Minha empresa está um verdadeiro caos. Nossos computadores estão apresentando problemas por todos os lados e minha equipe inteira pediu demissão depois de descobrir o tamanho da investigação.</p>
+          <p>Preciso de alguém corajoso, atento e que entenda de arquitetura computacional. E então... você aceita esse desafio?”</p>
+        </div>
+
+        <div class="intro-actions">
+          <button id="btn-aceitar" class="btn btn-primary">Aceitar o desafio <span>→</span></button>
+          <button id="btn-recusar" class="btn btn-ghost">Recusar proposta</button>
+        </div>
+        <p id="resposta-diretor" class="director-response" aria-live="polite"></p>
+      </div>
+      <p class="footer-note">BYTE & CIA. · DEPARTAMENTO DE INVESTIGAÇÃO</p>
+    </section>
+
+    <!-- TELA DE INVESTIGAÇÃO -->
+    <section id="tela-investigacao" class="screen investigation-screen hidden">
+      <header class="topbar">
+        <div class="topbar-brand"><span class="mini-mark">?</span><span>DETETIVE <b>DA ARQUITETURA</b></span></div>
+        <button id="btn-voltar" class="text-button">← Sair da investigação</button>
+      </header>
+
+      <section class="case-heading">
+        <div>
+          <p class="eyebrow">BYTE & CIA. · CASO CONFIDENCIAL 016</p>
+          <h2>Quadro de <span>evidências</span></h2>
+          <p>Analise os relatos e identifique qual componente está relacionado a cada ocorrência.</p>
+        </div>
+        <div class="progress-box">
+          <span>INVESTIGAÇÕES PREENCHIDAS</span>
+          <strong id="progresso">0 <small>/ 16</small></strong>
+          <div class="progress-track"><div id="barra-progresso"></div></div>
+        </div>
+      </section>
+
+      <div class="notice">
+        <span class="notice-icon">i</span>
+        <p>Preencha os 16 casos. Você pode digitar os nomes com ou sem espaços e acentos. Depois, clique em <b>Conferir investigação</b>.</p>
+      </div>
+
+      <section id="mural" class="evidence-board" aria-label="Mural com 16 evidências">
+        <div class="board-stamp">EVIDÊNCIAS<br>EM ANÁLISE</div>
+        <!-- Os 16 cards são criados pelo JavaScript. -->
+      </section>
+
+      <div class="investigation-footer">
+        <p id="status-preenchimento" aria-live="polite">Ainda faltam 16 respostas.</p>
+        <div class="footer-actions">
+          <button id="btn-reiniciar" class="btn btn-ghost">↻ Reiniciar</button>
+          <button id="btn-conferir" class="btn btn-primary" disabled>Conferir investigação <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA DE RESULTADO / CHEQUE -->
+    <section id="tela-resultado" class="screen result-screen hidden">
+      <div class="result-layout">
+        <div class="result-copy">
+          <p class="eyebrow">BYTE & CIA. · RELATÓRIO FINAL</p>
+          <h2>Investigação <span>concluída.</span></h2>
+          <p id="mensagem-resultado">O diretor analisou seu trabalho. Confira seu desempenho e seu pagamento.</p>
+          <div class="score-summary">
+            <strong id="total-acertos">0 de 16</strong>
+            <span>investigações resolvidas corretamente</span>
+          </div>
+          <div class="result-actions">
+            <button id="btn-ver-erros" class="btn btn-primary">Ver relatório de evidências</button>
+            <button id="btn-jogar-novamente" class="btn btn-ghost">↻ Jogar novamente</button>
+          </div>
+        </div>
+
+        <article class="paycheck">
+          <div class="check-top">
+            <div>
+              <p class="check-overline">BYTE & CIA. · FOLHA DE PAGAMENTO</p>
+              <h3>CHEQUE</h3>
+            </div>
+            <div class="check-seal">BC</div>
+          </div>
+          <div class="check-rule"></div>
+          <p class="check-label">PAGAR A</p>
+          <p class="check-recipient">Detetive contratado</p>
+          <div class="check-amount-area">
+            <div>
+              <p class="check-label">VALOR DO PAGAMENTO</p>
+              <strong id="valor-pagamento">R$ 0,00</strong>
+            </div>
+            <span class="check-currency">BRL</span>
+          </div>
+          <p class="check-label">VALOR POR EXTENSO</p>
+          <p id="valor-extenso" class="check-written">Pagamento referente à investigação.</p>
+          <div class="check-bottom">
+            <div>
+              <p class="check-label">INVESTIGAÇÕES CORRETAS</p>
+              <strong id="acertos-cheque">0 / 16</strong>
+            </div>
+            <div class="signature">
+              <span>Diretoria Executiva</span>
+              <small>ASSINATURA AUTORIZADA</small>
+            </div>
+          </div>
+          <div class="paid-stamp">PAGO</div>
+          <p class="check-number">CHEQUE Nº 000016 · NÃO NEGOCIÁVEL</p>
+        </article>
+      </div>
+
+      <section id="relatorio-erros" class="report hidden">
+        <div class="report-heading">
+          <div>
+            <p class="eyebrow">REVISÃO DO CASO</p>
+            <h3>Relatório das evidências</h3>
+          </div>
+          <span id="resumo-relatorio"></span>
+        </div>
+        <div id="lista-relatorio" class="report-list"></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
