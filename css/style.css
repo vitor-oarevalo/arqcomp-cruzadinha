@@ -152,7 +152,7 @@ h1 span, h2 span { color: var(--red); }
 .evidence-number { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font: 10px 'DM Mono', monospace; color: #82766a; }
 .evidence-number .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #c7b9a4; }
 .photo-frame {
-  height: 118px; padding: 7px; background: #e1d7c5; border: 1px solid #d1c5b1;
+  height: 138px; padding: 7px; background: #e1d7c5; border: 1px solid #d1c5b1;
   display: grid; place-items: center; overflow: hidden;
 }
 .photo-frame img { width: 100%; height: 100%; object-fit: contain; }
